@@ -166,60 +166,60 @@ while True:
      else:
         slider_one_enable.write(0)
 
-     if (slider2 - slider2_targetValue) > threshold and (slider2 > slider2_targetValue):
-        slider_two_up.write(0)
-        slider_two_down.write(1)
-        slider_two_enable.write(speed)
-     elif (slider2_targetValue - slider2) > threshold and (slider2 < slider2_targetValue):
-        slider_two_up.write(1)
-        slider_two_down.write(0)
-        slider_two_enable.write(speed)
-     else:
-        slider_two_enable.write(0)
+#    if (slider2 - slider2_targetValue) > threshold and (slider2 > slider2_targetValue):
+#       slider_two_up.write(0)
+#       slider_two_down.write(1)
+#       slider_two_enable.write(speed)
+#    elif (slider2_targetValue - slider2) > threshold and (slider2 < slider2_targetValue):
+#       slider_two_up.write(1)
+#       slider_two_down.write(0)
+#       slider_two_enable.write(speed)
+#    else:
+#       slider_two_enable.write(0)
 
-     if (slider3 - slider3_targetValue) > threshold and (slider3 > slider3_targetValue):
-        slider_three_up.write(0)
-        slider_three_down.write(1)
-        slider_three_enable.write(speed)
-     elif (slider3_targetValue - slider3) > threshold and (slider3 < slider3_targetValue):
-        slider_three_up.write(1)
-        slider_three_down.write(0)
-        slider_three_enable.write(speed)
-     else:
-        slider_three_enable.write(0)
+#    if (slider3 - slider3_targetValue) > threshold and (slider3 > slider3_targetValue):
+#       slider_three_up.write(0)
+#       slider_three_down.write(1)
+#       slider_three_enable.write(speed)
+#    elif (slider3_targetValue - slider3) > threshold and (slider3 < slider3_targetValue):
+#       slider_three_up.write(1)
+#       slider_three_down.write(0)
+#       slider_three_enable.write(speed)
+#    else:
+#       slider_three_enable.write(0)
 
-     if (slider4 - slider4_targetValue) > threshold and (slider4 > slider4_targetValue):
-        slider_four_up.write(0)
-        slider_four_down.write(1)
-        slider_four_enable.write(speed)
-     elif (slider4_targetValue - slider4) > threshold and (slider4 < slider4_targetValue):
-        slider_four_up.write(1)
-        slider_four_down.write(0)
-        slider_four_enable.write(speed)
-     else:
-        slider_four_enable.write(0)
+#    if (slider4 - slider4_targetValue) > threshold and (slider4 > slider4_targetValue):
+#       slider_four_up.write(0)
+#       slider_four_down.write(1)
+#       slider_four_enable.write(speed)
+#    elif (slider4_targetValue - slider4) > threshold and (slider4 < slider4_targetValue):
+#       slider_four_up.write(1)
+#       slider_four_down.write(0)
+#       slider_four_enable.write(speed)
+#    else:
+#       slider_four_enable.write(0)
 
-     if (slider5 - slider5_targetValue) > threshold and (slider5 > slider5_targetValue):
-        slider_five_up.write(0)
-        slider_five_down.write(1)
-        slider_five_enable.write(speed)
-     elif (slider5_targetValue - slider5) > threshold and (slider5 < slider5_targetValue):
-        slider_five_up.write(1)
-        slider_five_down.write(0)
-        slider_five_enable.write(speed)
-     else:
-        slider_five_enable.write(0)
+#    if (slider5 - slider5_targetValue) > threshold and (slider5 > slider5_targetValue):
+#       slider_five_up.write(0)
+#       slider_five_down.write(1)
+#       slider_five_enable.write(speed)
+#    elif (slider5_targetValue - slider5) > threshold and (slider5 < slider5_targetValue):
+#       slider_five_up.write(1)
+#       slider_five_down.write(0)
+#       slider_five_enable.write(speed)
+#    else:
+#       slider_five_enable.write(0)
 
-     if (slider6 - slider6_targetValue) > threshold and (slider6 > slider6_targetValue):
-        slider_six_up.write(0)
-        slider_six_down.write(1)
-        slider_six_enable.write(speed)
-     elif (slider6_targetValue - slider6) > threshold and (slider6 < slider6_targetValue):
-        slider_six_up.write(1)
-        slider_six_down.write(0)
-        slider_six_enable.write(speed)
-     else:
-        slider_six_enable.write(0)
+#    if (slider6 - slider6_targetValue) > threshold and (slider6 > slider6_targetValue):
+#       slider_six_up.write(0)
+#       slider_six_down.write(1)
+#       slider_six_enable.write(speed)
+#    elif (slider6_targetValue - slider6) > threshold and (slider6 < slider6_targetValue):
+#       slider_six_up.write(1)
+#       slider_six_down.write(0)
+#       slider_six_enable.write(speed)
+#    else:
+#       slider_six_enable.write(0)
 
 #    if (slider7 - slider7_targetValue) > threshold and (slider7 > slider7_targetValue):
 #       slider_seven_up.write(0)
@@ -243,16 +243,16 @@ while True:
 #    else:
 #       slider_eight_enable.write(0)
 
-     if (slider9 - slider9_targetValue) > threshold and (slider9 > slider9_targetValue):
-        slider_nine_up.write(0)
-        slider_nine_down.write(1)
-        slider_nine_enable.write(speed)
-     elif (slider9_targetValue - slider9) > threshold and (slider9 < slider9_targetValue):
-        slider_nine_up.write(1)
-        slider_nine_down.write(0)
-        slider_nine_enable.write(speed)
-     else:
-        slider_nine_enable.write(0)
+#    if (slider9 - slider9_targetValue) > threshold and (slider9 > slider9_targetValue):
+#       slider_nine_up.write(0)
+#       slider_nine_down.write(1)
+#       slider_nine_enable.write(speed)
+#    elif (slider9_targetValue - slider9) > threshold and (slider9 < slider9_targetValue):
+#       slider_nine_up.write(1)
+#       slider_nine_down.write(0)
+#       slider_nine_enable.write(speed)
+#    else:
+#       slider_nine_enable.write(0)
 
 #    if (slider10 - slider10_targetValue) > threshold and (slider10 > slider10_targetValue):
 #       slider_ten_up.write(0)
@@ -276,16 +276,16 @@ while True:
 #    else:
 #       slider_eleven_enable.write(0)
 
-     if (slider12 - slider12_targetValue) > threshold and (slider12 > slider12_targetValue):
-        slider_twelve_up.write(0)
-        slider_twelve_down.write(1)
-        slider_twelve_enable.write(speed)
-     elif (slider12_targetValue - slider12) > threshold and (slider12 < slider12_targetValue):
-        slider_twelve_up.write(1)
-        slider_twelve_down.write(0)
-        slider_twelve_enable.write(speed)
-     else:
-        slider_twelve_enable.write(0)
+#    if (slider12 - slider12_targetValue) > threshold and (slider12 > slider12_targetValue):
+#       slider_twelve_up.write(0)
+#       slider_twelve_down.write(1)
+#       slider_twelve_enable.write(speed)
+#    elif (slider12_targetValue - slider12) > threshold and (slider12 < slider12_targetValue):
+#       slider_twelve_up.write(1)
+#       slider_twelve_down.write(0)
+#       slider_twelve_enable.write(speed)
+#    else:
+#       slider_twelve_enable.write(0)
 
 #    if (slider13 - slider13_targetValue) > threshold and (slider13 > slider13_targetValue):
 #       slider_thirteen_up.write(0)
@@ -298,38 +298,38 @@ while True:
 #    else:
 #       slider_thirteen_enable.write(0)
 
-     if (slider14 - slider14_targetValue) > threshold and (slider14 > slider14_targetValue):
-        slider_fourteen_up.write(0)
-        slider_fourteen_down.write(1)
-        slider_fourteen_enable.write(speed)
-     elif (slider14_targetValue - slider14) > threshold and (slider14 < slider14_targetValue):
-        slider_fourteen_up.write(1)
-        slider_fourteen_down.write(0)
-        slider_fourteen_enable.write(speed)
-     else:
-        slider_fourteen_enable.write(0)
+#    if (slider14 - slider14_targetValue) > threshold and (slider14 > slider14_targetValue):
+#       slider_fourteen_up.write(0)
+#       slider_fourteen_down.write(1)
+#       slider_fourteen_enable.write(speed)
+#    elif (slider14_targetValue - slider14) > threshold and (slider14 < slider14_targetValue):
+#       slider_fourteen_up.write(1)
+#       slider_fourteen_down.write(0)
+#       slider_fourteen_enable.write(speed)
+#    else:
+#       slider_fourteen_enable.write(0)
 
-     if (slider15 - slider15_targetValue) > threshold and (slider15 > slider15_targetValue):
-        slider_fifteen_up.write(0)
-        slider_fifteen_down.write(1)
-        slider_fifteen_enable.write(speed)
-     elif (slider15_targetValue - slider15) > threshold and (slider15 < slider15_targetValue):
-        slider_fifteen_up.write(1)
-        slider_fifteen_down.write(0)
-        slider_fifteen_enable.write(speed)
-     else:
-        slider_fifteen_enable.write(0)
+#    if (slider15 - slider15_targetValue) > threshold and (slider15 > slider15_targetValue):
+#       slider_fifteen_up.write(0)
+#       slider_fifteen_down.write(1)
+#       slider_fifteen_enable.write(speed)
+#    elif (slider15_targetValue - slider15) > threshold and (slider15 < slider15_targetValue):
+#       slider_fifteen_up.write(1)
+#       slider_fifteen_down.write(0)
+#       slider_fifteen_enable.write(speed)
+#    else:
+#       slider_fifteen_enable.write(0)
 
-     if (slider16 - slider16_targetValue) > threshold and (slider16 > slider16_targetValue):
-        slider_sixteen_up.write(0)
-        slider_sixteen_down.write(1)
-        slider_sixteen_enable.write(speed)
-     elif (slider16_targetValue - slider16) > threshold and (slider16 < slider16_targetValue):
-        slider_sixteen_up.write(1)
-        slider_sixteen_down.write(0)
-        slider_sixteen_enable.write(speed)
-     else:
-        slider_sixteen_enable.write(0)
+#    if (slider16 - slider16_targetValue) > threshold and (slider16 > slider16_targetValue):
+#       slider_sixteen_up.write(0)
+#       slider_sixteen_down.write(1)
+#       slider_sixteen_enable.write(speed)
+#    elif (slider16_targetValue - slider16) > threshold and (slider16 < slider16_targetValue):
+#       slider_sixteen_up.write(1)
+#       slider_sixteen_down.write(0)
+#       slider_sixteen_enable.write(speed)
+#    else:
+#       slider_sixteen_enable.write(0)
 
 
      clear() 

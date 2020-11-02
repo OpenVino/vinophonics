@@ -585,18 +585,21 @@ def slider_move ():
 
 while True: 
 
-        r = requests.get('http://costaflores.openvino.exchange/now')
-        r_list= r.json()
+        try:
+                r = requests.get('http://costaflores.openvino.exchange/now')
+                r_list= r.json()
 
-        cabernet = (r_list[0])
-        petit_verdot = (r_list[1])
-        malbec_oeste = (r_list[2])
-        malbec_este = (r_list[3])
-
-        cs_hash = cabernet["hash"]
-        pv_hash = petit_verdot["hash"]
-        mbo_hash = malbec_oeste["hash"]
-        mbe_hash = malbec_este["hash"]
+                cabernet = (r_list[0])
+                petit_verdot = (r_list[1])
+                malbec_oeste = (r_list[2])
+                malbec_este = (r_list[3])
+                
+                cs_hash = cabernet["hash"]
+                pv_hash = petit_verdot["hash"]
+                mbo_hash = malbec_oeste["hash"]
+                mbe_hash = malbec_este["hash"]
+        except:
+                print("no connection?")
 
         if GPIO.input(23) == 1:
                 print ("Switch is set to LOCAL. Do nothing with CS. ")

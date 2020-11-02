@@ -19,6 +19,10 @@ def clear():
 	else: 
 		_ = system('clear') 
 
+# to capture kill signals
+import signal
+import sys
+
 # module for accessing openvino api endpoint
 
 import requests
@@ -144,24 +148,8 @@ slider_16_enable	= board.get_pin('d:17:o')
 slider_16_up	    = board.get_pin('d:53:o')
 slider_16_down	    = board.get_pin('d:51:o')
 
-#slider_1_targetValue = .5
-#slider_2_targetValue = .5
-#slider_3_targetValue = .5
-#slider_4_targetValue = .5
-#slider_5_targetValue = .5
-#slider_6_targetValue = .5
-#slider_7_targetValue = .5
-#slider_8_targetValue = .5
-#slider_9_targetValue = .5
-#slider_10_targetValue = .5
-#slider_11_targetValue = .5
-#slider_12_targetValue = .5
-#slider_13_targetValue = .5
-#slider_14_targetValue = .5
-#slider_15_targetValue = .5
-#slider_16_targetValue = .5
 
-time.sleep(1)
+time.sleep(.1)
 
 # Initialize the default hash values
 
@@ -480,41 +468,41 @@ def slider_move ():
             slider_10_pos = float(slider_10.read())
         else:
             slider_10_enable.write(0)
-
-        if (slider_11_pos - slider_11_targetValue) > threshold  and (slider_11_pos > slider_11_targetValue):
-            slider_11_up.write(0)
-            slider_11_down.write(1)
-            slider_11_enable.write(speed)
-            board.pass_time(hold)
-            slider_11_enable.write(0)
-            slider_11_pos = float(slider_11.read())
-        elif (slider_11_targetValue - slider_11_pos) > threshold and (slider_11_pos < slider_11_targetValue):
-            slider_11_up.write(1)
-            slider_11_down.write(0)
-            slider_11_enable.write(speed)
-            board.pass_time(hold)
-            slider_11_enable.write(0)
-            slider_11_pos = float(slider_11.read())
-        else:
-            slider_11_enable.write(0)
-
-        if (slider_12_pos - slider_12_targetValue) > threshold and (slider_12_pos > slider_12_targetValue):
-            slider_12_up.write(0)
-            slider_12_down.write(1)
-            slider_12_enable.write(speed)
-            board.pass_time(hold)
-            slider_12_enable.write(0)
-            slider_12_pos = float(slider_12.read())
-        elif (slider_12_targetValue - slider_12_pos) > threshold and (slider_12_pos < slider_12_targetValue):
-            slider_12_up.write(1)
-            slider_12_down.write(0)
-            slider_12_enable.write(speed)
-            board.pass_time(hold)
-            slider_12_enable.write(0)
-            slider_12_pos = float(slider_12.read())
-        else:
-            slider_12_enable.write(0)
-
+#
+#        if (slider_11_pos - slider_11_targetValue) > threshold  and (slider_11_pos > slider_11_targetValue):
+#            slider_11_up.write(0)
+#            slider_11_down.write(1)
+#            slider_11_enable.write(speed)
+#            board.pass_time(hold)
+#            slider_11_enable.write(0)
+#            slider_11_pos = float(slider_11.read())
+#        elif (slider_11_targetValue - slider_11_pos) > threshold and (slider_11_pos < slider_11_targetValue):
+#            slider_11_up.write(1)
+#            slider_11_down.write(0)
+#            slider_11_enable.write(speed)
+#            board.pass_time(hold)
+#            slider_11_enable.write(0)
+#            slider_11_pos = float(slider_11.read())
+#        else:
+#            slider_11_enable.write(0)
+#
+#        if (slider_12_pos - slider_12_targetValue) > threshold and (slider_12_pos > slider_12_targetValue):
+#            slider_12_up.write(0)
+#            slider_12_down.write(1)
+#            slider_12_enable.write(speed)
+#            board.pass_time(hold)
+#            slider_12_enable.write(0)
+#            slider_12_pos = float(slider_12.read())
+#        elif (slider_12_targetValue - slider_12_pos) > threshold and (slider_12_pos < slider_12_targetValue):
+#            slider_12_up.write(1)
+#            slider_12_down.write(0)
+#            slider_12_enable.write(speed)
+#            board.pass_time(hold)
+#            slider_12_enable.write(0)
+#            slider_12_pos = float(slider_12.read())
+#        else:
+#            slider_12_enable.write(0)
+#
         if (slider_13_pos - slider_13_targetValue) > threshold and (slider_13_pos > slider_13_targetValue):
             slider_13_up.write(0)
             slider_13_down.write(1)
@@ -598,6 +586,10 @@ while True:
                 pv_hash = petit_verdot["hash"]
                 mbo_hash = malbec_oeste["hash"]
                 mbe_hash = malbec_este["hash"]
+        except KeyboardInterrupt:
+                print("fuck off!")
+                board.exit()
+                sys.exit()
         except:
                 print("no connection?")
 

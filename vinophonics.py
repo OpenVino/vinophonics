@@ -5,19 +5,22 @@ import json
 
 # import only system from os 
 
-from os import system, name 
+import os
+#from os import system, name 
 
 # define our clear function 
 
 def clear(): 
 
+
 	# for windows 
 	if name == 'nt': 
-		_ = system('cls') 
+		_ = os.system('cls') 
+
 
 	# for mac and linux(here, os.name is 'posix')
 	else: 
-		_ = system('clear') 
+		_ = os.system('clear') 
 
 # to capture kill signals
 import signal
@@ -247,6 +250,12 @@ except Exception as error:
         pv_hash = 1
         mbo_hash = 1
         mbe_hash = 1
+
+def image_capture ():
+        try:
+             os.system('gphoto2 --capture-image-and-download --filename "/threesixty/vinofisheye.jpg" --force-overwrite --camera "Canon EOS 600D"')
+        except Exception as error:
+             print("An exception ocurred with gphoto {error}")
         
 def slider_move ():
 

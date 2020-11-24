@@ -228,21 +228,26 @@ slider_15_targetValue = temperature
 slider_16_targetValue = humidity
 
 # Initial read from API
-
-r = requests.get('http://costaflores.openvino.exchange/now')
-r_list= r.json()
-
-cabernet = (r_list[0])
-petit_verdot = (r_list[1])
-malbec_oeste = (r_list[2])
-malbec_este = (r_list[3])
-
-cs_hash = cabernet["hash"]
-pv_hash = petit_verdot["hash"]
-mbo_hash = malbec_oeste["hash"]
-mbe_hash = malbec_este["hash"]
-
-
+try:        
+        r = requests.get('http://costaflores.openvino.exchange/now')
+        r_list= r.json()
+        
+        cabernet = (r_list[0])
+        petit_verdot = (r_list[1])
+        malbec_oeste = (r_list[2])
+        malbec_este = (r_list[3])
+        
+        cs_hash = cabernet["hash"]
+        pv_hash = petit_verdot["hash"]
+        mbo_hash = malbec_oeste["hash"]
+        mbe_hash = malbec_este["hash"]
+except Exception as error:
+        print("An exception occurred {error}")
+        cs_hash = 1
+        pv_hash = 1
+        mbo_hash = 1
+        mbe_hash = 1
+        
 def slider_move ():
 
         time.sleep(.01)
